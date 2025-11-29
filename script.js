@@ -21,7 +21,7 @@ async function sendImage() {
     document.getElementById("output").textContent = "";
 
     try {
-        const res = await fetch("https://miezi-website-backend.onrender.com", { method: "POST", body: formData });
+        const res = await fetch("https://miezi-website-backend.onrender.com/api/analyse-image", { method: "POST", body: formData });
         const data = await res.json();
 
         // Spinner ausblenden
