@@ -1,0 +1,218 @@
+body {
+    max-width: 900px;
+    margin: auto;
+    background: linear-gradient(to bottom, white 0px, white 400px, royalblue 400px, royalblue 100%);
+    font-family: Arial, sans_serif;
+    padding: 30px;
+    line-height: 1.6;
+    min-height: 100vh;
+
+    animation: fade 2s ease-in;
+    @keyframes fade {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}
+
+h1 {
+    color: royalblue;
+    font-size: 100px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: royalblue;
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: rgb(75, 119, 214);
+    transform: scale(1.1);
+}
+
+nav {
+    background: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(75, 119, 214);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: royalblue;
+
+    transition: 0.2s;
+}
+
+nav a.button {
+    padding: 4px 22px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: royalblue;
+    color: white;
+    transition: 0.3s ease;
+}
+
+nav a:hover{
+    transform: scale(1.05);
+    color: rgb(149, 195, 248);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.bluebox {
+    width: 1000px;
+    height: 2000px;
+    background-color: royalblue;
+    align-self: center;
+}
+
+img {
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.white-box {
+    width: 700px;
+    height: 1000px;
+    background: linear-gradient(to bottom, royalblue 0%, royalblue 50px, white 50px, white 100%);
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-left: 100px;
+    border-radius: 30px;
+
+    
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.image-drop-field {
+    background-color: rgb(162, 177, 223);
+    align-self: center;
+    margin-left: 250px;
+    margin-top: 250px;
+    width: 200px;
+    height: 250px;
+
+    padding: 10px 20px;
+    color: black;
+    border-radius: 8px;
+    border-width: 10px;
+    border-color: royalblue;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.img-upload-button {
+    align-self: center;
+    width: 500px;
+    height: 250px;
+
+    padding: 10px 20px;
+    color: black;
+    border-radius: 8px;
+    border-width: 10px;
+
+    margin-bottom: -90px;
+}
+
+.miezi-pfp {
+    margin-top: 280px;
+    margin-left: -280px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3; 
+  border-top: 6px solid royalblue; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image-upload {
+    margin-right: 100;
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: sans-serif;
+}
+
+/* Nutzer-Bubble */
+.user-bubble {
+    align-self: flex-end;
+    background: #4a90e2;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 18px 18px 0 18px;
+    max-width: 80%;
+}
+
+/* KI-Bubble */
+.ai-bubble {
+    align-self: flex-start;
+    background: #e8e8e8;
+    color: #000;
+    padding: 12px 16px;
+    border-radius: 18px 18px 18px 0;
+    max-width: 80%;
+    white-space: pre-line; /* Damit Zeilenumbrüche angezeigt werden */
+}
+
+/* Cursor-Effekt am Ende während des Tippens */
+.typing-cursor::after {
+    content: "▋";
+    margin-left: 4px;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
